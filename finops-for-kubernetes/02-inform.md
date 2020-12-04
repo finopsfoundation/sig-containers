@@ -25,7 +25,7 @@ Every provider will offer their own levels of support and service, including hel
 
 The traditional approach to billing for managed kubernetes services is to charge per cluster per hour, plus the additional underlying resources that the cluster consumes. This makes container cost management especially challenging since you can’t simply look at your cloud bill and see which resources are being consumed by a container cluster.
 
-### Why is it harder to bill and report on Kubernetes costs?
+## Why is it harder to bill and report on Kubernetes costs?
 
 Allocating costs in a container environment surfaces additional challenges than traditional cloud environments. In a traditional cloud environment, FinOps practitioners can tag non-container resources one-to-one, allowing reporting tools to easily map services to cost centers. Assigning accountability for those apps is simply a mapping exercise of app vendor tags to a team.
 
@@ -39,7 +39,7 @@ Containers are deployed in Kubernetes clusters, which consume cloud resources (s
 
 Additionally, containerized environments are much more dynamic than non-containerized ones, with the [average lifespan of a container being one day](https://www.google.com/url?q=https://www.datadoghq.com/container-report/&sa=D&ust=1606873149474000&usg=AOvVaw31ESoO5kTZWVAy7WoBpCQA) versus a typically much longer utilization time for a VM. Given the dynamic nature of the Kubernetes scheduler, workloads can be rescheduled across instance type, zone, or even region. This makes cost management even more complex, as you must keep up with the rapid pace of change.
 
-### Tracking shared cluster and off-cluster resource costs together
+## Tracking shared cluster and off-cluster resource costs together
 
 ![An example of shared and off-cluster resources]()
 
@@ -48,20 +48,20 @@ Additionally, containerized environments are much more dynamic than non-containe
 
 So, how do we unravel this complexity and improve how we manage container costs? First, let’s quickly review how our teams are billed for Kubernetes usage.
 
-### Cost allocation practices and policy examples to govern container spending
+## Cost allocation practices and policy examples to govern container spending
 
 **With cloud financial management, predictability is king.** Experienced FinOps practitioners will keep costs within budget and minimize surprises. Teams that are used to data center costs know that they are fixed and recurring. The transition to cloud services changes this expectation, and containerization further complicates things.
 
-### Container classes within Kubernetes
+## Container classes within Kubernetes
 Cluster orchestration solutions like Kubernetes allow you to set different resource guarantees on the scheduled containers called Quality of Service (QoS) classes.
 
-#### Guaranteed resource allocation
+### Guaranteed resource allocation
 For critical service containers, you might use guaranteed resource allocation to ensure that a set amount of vCPU and memory is available to the pod at all times. You can think of guaranteed resource allocation as reserved capacity. The size and shape of the container do not change.
 
-#### Burstable resource allocation
+### Burstable resource allocation
 Spikey workloads can benefit from having access to more resources only when required, letting the pod use more resources than initially requested when the capacity is available on the underlying server instance. Burstable resource allocation is more like the burstable server instances offered by some cloud service providers (T-series from AWS and f1-series from GCP), which give you a base level of performance but allow the pod to burst when needed.
 
-#### Best effort resource allocation
+### Best effort resource allocation
 Additionally, development/test containers can use best-effort resource allocation, which allows the pod to run while there is excess capacity, but stops it when there isn’t. This class is similar to preemptible VMs in GCP or spot instances in AWS.
 
 When the container orchestrator allocates a mix of pods with different resource allocation guarantees onto each server instance, you get higher server instance utilization. You can allocate a base amount of resources to fixed resource pods, along with some burstable pods that may use up to the remainder of the server resources, and some best effort pods to use up any spare capacity that becomes available.
@@ -80,7 +80,7 @@ Now that we’ve covered some basics, the next part of this section will start t
 
 In any FinOps or cloud financial management strategy, flexibly understanding costs can drive more accountability. The goal: to help users see their container cost drivers by both services used and container workload. Combining these two layers helps teams determine their Total Cost of Ownership.
 
-### Taking a deeper look at specific containerization costs
+## Taking a deeper look at specific containerization costs
 One method, recommended by Debo Aderibigbe, a Google Cloud Billing Product Manager, is to break down costs by:
 * **Billing Hierarchy:** Organizations, folders, projects, normalizing them with cross-cloud concepts: Linked Accounts, Tags, Subscriptions, etc.
 * **Resources:** Compute cores, RAM, GPU, TPU, Load Balancers, Persistent Disk, Custom Machines, Network Egress
@@ -89,7 +89,7 @@ One method, recommended by Debo Aderibigbe, a Google Cloud Billing Product Manag
 
 With a deep labeling and tagging of all of these cost drivers, users can improve the accuracy of how they invoice teams, audit costs, allocate costs, optimize overrun costs, model budgeting scenarios, or fit workload costs within quotas or under budget caps.
 
-### How LiveRamp addressed containerization costs on GKE
+## How LiveRamp addressed containerization costs on GKE
 The LiveRamp team migrated on-prem services to Google Cloud Platform, scaling up container services (and costs), which caught the eye of the Finance team. They completed a successful technical migration, but a month later, budgets were overrun. They needed a way to explain  what happened.
 
 At that time, LiveRamp was missing the cultural shift to FinOps, and developers didn’t understand their new responsibilities were to cloud finances. To increase this understanding, container-focused FinOps principles helped rationalize cloud cost and operational decisions in different ways. They had to overcome challenges that came up due to every team having their own accounts and setups.
@@ -98,7 +98,7 @@ After much FinOps-focused work, new policies were built in, such as enforced nam
 
 *-Sasha Kipervarg, (former) Head of Global Cloud Operations, LiveRamp*
 
-### Consistent labeling and namespace strategy to improve allocation
+## Consistent labeling and namespace strategy to improve allocation
 Once you’ve implemented a consistent and robust labeling and namespace strategy, you can start to consider how you will allocate cluster costs. Unless you’re using GKE, you can’t easily see which groups are driving costs within a cluster.
 
 A common methodology will be to look at the proportional resources consumed by each group (label, namespace, etc) and use that to allocate the cluster costs to those groups. For example, if you have four namespaces in a cluster that each consume 25% of the cluster resources, you could decide to allocate 25% of the total cluster costs back to each of those namespaces. 
@@ -112,30 +112,30 @@ There are pros and cons to each of these approaches, as outlined in the table be
 |  Advantages | Allocate all costs Incentivize teams to only provision what they need There are tools to help!(e.g. vertical pod autoscaler) | Each team / app only pays for what they use                                                                                                                                                             |
 |  Challenges | Some organizations are not using resource request fields yet May also incentivize under-specifying requirements              | Who pays for the rest (idle time / cycles)? What do we do about overprovisioning? Can incentivize teams to provision more just in case, and not pay for it Can set unrealistic goal of 100% utilization |
 
-### Going beyond the Core Cluster Costs
+## Going beyond the Core Cluster Costs
 When allocating the costs out to the consumers of the cluster, it’s important to consider not only the cost of the compute nodes the container operated upon, but also the satellite costs of operating the cluster. 
 
-#### Management / Cluster Operational costs
+### Management / Cluster Operational costs
 Costs charged by the cloud service provider for managing the cluster or costs incurred by running self managed container orchestrator nodes should be considered. Edge services like WAF, Load Balancers, etc also contribute to the overall cost of running a workload on a cluster.
 
-#### Storage Costs
+### Storage Costs
 Containers consume storage even if this is treated as ephemeral by the services running inside the container. Outside of the container however, consider the host OS on the nodes and any backup or data retrieval storage that is used in operating a production cluster can be allocated back to the workloads running on the cluster.
 
-#### Licensing
+### Licensing
 Licensing costs are always a fun topic, if you are running licensed operating systems for the host node. License costs may be included in the charge by your cloud service provider. However, if you operate these using bring your own license (BOYL), the license cost will need to be allocated from the external spend. Alongside the host operating system, consider any software packages running on the host OS that incurs a license fee. The workload itself running inside the container may also be using licensed software that may need to be allocated.
 
-#### Observability
+### Observability
 Often, metrics and logs are sent from the cluster to a service which your teams are able to visualise, monitor, and alert upon. This data is sent either to services operated by the cloud service provider or even 3rd party SaaS solutions like (Splunk Cloud, Sumo Logic, Datadog, SignalFx, etc). 
 
-#### Security
+### Security
 The major cloud service providers now have very extensive security related services to assist in maintaining a secure cloud environment. Enabling these security features however does not often come for free, and these additional costs may need to be allocated to your teams.
 
 Tempting as it may be to include every individual dollar from all of the above sources in your cost allocation strategy, as with everything FinOps, we recommend you start simple and grow your practice over time (Crawl, Walk, Run). It can become overwhelming to implement all of these cost allocation items at once, and as you develop both a process to allocate costs and the understanding of the allocation around your organization, the divide and conquer approach will be more likely to succeed.
 
-### Addressing static versus runtime container costs
+## Addressing static versus runtime container costs
 Containerization costs are also broken up into two primary types: Static and Runtime costs.
 
-#### Static costs
+### Static costs
 For static costs, you need to consider the creation of the solution within the container to ensure the quality of the solution to the project but also how it affects the CPU, Network and Storage when deployed. Static container costs can be further defined by stateless and stateful containers: Stateless examples of these include: 
 
 * Web servers with static resources: Apache, Nginx, IIS, 
@@ -143,20 +143,20 @@ For static costs, you need to consider the creation of the solution within the c
 * Microservices;  Spring Boot, Play, Quarkus
 * Tools: Maven, Gradle, scripts, tests
 
-#### Application servers with stateful applications
+### Application servers with stateful applications
 There is often a need to store user sessions in an application. Two approaches to handling this case are to use a load balancer with session affinity to ensure the user always goes to the same container instance or to use an external session persistence mechanism which all container instances share.
 
 There are also some components that provide native clustering such as portals or persistence layer caches. It’s usually best to let the native software manage synchronization and states between instances. Having the instances on the same overlay network allows them to communicate with each other in a fast, secure way.
 
-#### Databases
+### Databases
 Databases usually need to persist data on a filesystem. The best practice is to only containerize the database engine while keeping its data on the container host itself. This can be done using a host volume, for example: $ docker run -dit -v /var/myapp/data:/var/lib/postgresql/data postgres.
 
 Kubernetes can also be used as an alternative to managed database services. For example, a cluster dedicated to MongoDB or Elasticsearch can deliver something similar to a fully-managed service for a fraction of the cost.
 
-#### Applications with shared file systems
+### Applications with shared file systems
 Content Management Systems (CMS) use filesystems to store documents such as PDFs, pictures, Word files, etc. This can also be done using a host volume which is often mounted to a shared filesystem so several instances of the CMS can access the files simultaneously.
 
-#### Runtime costs
+### Runtime costs
 Runtime costs by most are assumed to be static for containers. How you run your containers will affect your bottom line. Examples of these costs from cloud service providers include:
 * Bandwidth is often overlooked or underappreciated in estimating cloud computing charges.
 * Leaving a containerized application deployed that you forgot about is a surefire way to get a surprising bill. Once you put applications or data into the cloud, they continue to cost you money, month after month, until such time as you remove them. It’s very easy to put something in the cloud and forget about it
@@ -165,7 +165,7 @@ Runtime costs by most are assumed to be static for containers. How you run your 
 * Unintended traffic in the form of DOS attacks or spiders etc. could increase traffic in unexpected ways. The best way to deal with such unintended charges is to audit the security of the application and provide measures of controls such as CAPTCHAs.
 * Management: Regularly monitor the health of your applications and its billing. Regularly review whether what’s in the cloud still needs to be in the cloud. Regularly monitor the amount of load on your applications. Adjust the size of your deployments to match load.
 
-### Considerations for container savings in production
+## Considerations for container savings in production
 Containerized deployments can realize up to 90% in discounts compared to on-demand prices for running stateless and fault-tolerant applications. Containers that shall be ephemeral and stateless adhere to a graceful startup and graceful shutdown.
 
 With these qualities, serverless deployments become more attractive due to the fact that these deployments are only charged when running. Another way to think about it is that you’re charged nothing while in a dormant state. Just deploying the contents to a serverless API is not enough as you must obtain equal functionality with performance. The cold start becomes your nemesis.
