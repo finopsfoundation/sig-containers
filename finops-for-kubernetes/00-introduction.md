@@ -19,8 +19,8 @@ Whether you’re a part of a team with an established FinOps practice, or are bu
 We created this whitepaper to cover key questions, challenges, and considerations that any FinOps teams should understand before tackling containerization in the cloud. If you’re already using containerized services, then use this guide to double check that your teams are operating with strong, modern FinOps best practices.
 
 This whitepaper will go over general container terms and concepts. It will also explore and address Kubernetes and container costs from the lens of FinOps core practices:
-* Inform: Understand how the public cloud providers charge for their Kubernetes services. Learn why performing chargeback and cost allocation in environments with Kubernetes is challenging.
-* Optimize: Look for ways to continuously optimize your Kubernetes clusters and pods.
-* Operate: Determine your approach to container cost allocation and build policies to govern container spending, and integrate tooling to help manage container costs alongside traditional cloud spending.
+* **Inform:** Understand how the public cloud providers charge for their Kubernetes services. Learn why performing chargeback and cost allocation in environments with Kubernetes is challenging.
+* **Optimize:** Look for ways to continuously optimize your Kubernetes clusters and pods.
+* **Operate:** Determine your approach to container cost allocation and build policies to govern container spending, and integrate tooling to help manage container costs alongside traditional cloud spending.
 
 Let’s begin.
