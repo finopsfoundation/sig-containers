@@ -2,6 +2,8 @@
 
 Launch Date: Nov 17, 2020 at CloudNativeCon North America
 
+![](https://github.com/finopsfoundation/sig-containers/blob/main/finops-for-kubernetes/img/header.png)
+
 Addressing how and why containers complicate how teams manage the visibility and optimization of container costs, and how to apply FinOps best practices to improve cloud financial management.
 
 ## Before you begin reading this paper

@@ -31,7 +31,7 @@ Allocating costs in a container environment surfaces additional challenges than 
 
 With Kubernetes, one-to-one mappings of tags to teams don’t cover some of the complex use cases that container utilization can create. Most Kubernetes clusters are shared services with applications run by any number of teams. This means there’s no direct cost to a specific container; a series of them are coming together to generate costs per cluster of work. There is no easy way to map cloud charges to specific container usage.
 
-![A high-level look at how containerized services can be labeled and mapped](/img/container-workload.png)
+![A high-level look at how containerized services can be labeled and mapped](https://github.com/finopsfoundation/sig-containers/blob/main/finops-for-kubernetes/img/container-workload.png)
 *Figure 2: A high-level look at how containerized services can be labeled and mapped.*
 *Source: Debo Aderibigbe, Billing Product Manager, Google Compute Cloud, [FinOps Summit: Cost Visibility and Optimization in Kubernetes](https://kccnceu20.sched.com/overview/type/FinOps+Summit), KubeCon, CloudNativeCon EU 2020.*
 
@@ -41,7 +41,7 @@ Additionally, containerized environments are much more dynamic than non-containe
 
 ## Tracking shared cluster and off-cluster resource costs together
 
-![An example of shared and off-cluster resources](/img/shared.png)
+![An example of shared and off-cluster resources](https://github.com/finopsfoundation/sig-containers/blob/main/finops-for-kubernetes/img/shared.png)
 
 *Figure 3: Applications with Shared Infrastructure and Services (Kubernetes)*
 *Source: Casey Doran, “FinOps Summit: Cost Visibility and Optimization in Kubernetes”*
@@ -73,7 +73,7 @@ Now that we’ve covered some basics, the next part of this section will start t
 * Assigning teams to namespaces can help provide accurate means to charge back container costs to respective projects and teams
 * Taking cloud service tagging to the next level with container cluster labels
 
-![A look at how complicated container cost allocation can be](/img/labeling.png)
+![A look at how complicated container cost allocation can be](https://github.com/finopsfoundation/sig-containers/blob/main/finops-for-kubernetes/img/labeling.png)
 
 *Figure 3: A look at how complicated cost allocation for containers can be.*
 *Source: Debo Aderibigbe, Billing Product Manager, Google Compute Cloud, FinOps Summit: Cost Visibility and Optimization in Kubernetes, KubeCon, CloudNativeCon EU 2020.*
