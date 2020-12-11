@@ -25,7 +25,7 @@ There are a few key terms we will use throughout this chapter:
 | Namespace               | Another Kubernetes concept, a namespace is a virtual cluster where pods/containers can be deployed separately from other namespaces.                                                                                                                                                                                                                             |
 | Pod labels              | Pod labels are key/value pairs that can identify attributes of objects that are meaningful and relevant to users, but do not directly imply semantics to the core system. Each object can have a set of key/value labels defined. Each Key must be unique for a given object. These can be helpful when you want to group more than one namespace, for example.  |
 
-![Here's an example Dev and Staging cluster](/img/dev-staging.png)
+![Here's an example Dev and Staging cluster](https://github.com/finopsfoundation/sig-containers/blob/main/finops-for-kubernetes/img/dev-staging.png)
 
 *Figure 1: Basic view of a Kubernetes cluster*
 
