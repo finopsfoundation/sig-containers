@@ -1,16 +1,14 @@
 # FinOps Foundation SIG Containers
 
-Primary Authors: tbc
+Primary Authors: Mike Fuller
 
 Reviewed and Contributed to by: tbc
 
 # Introduction
 
-tbc
+SIG-Containers exists to explore how FinOps applies to the container world within cloud. To help identify/define the added cloud financial management challenges that containers introduce and solutions/best practices around how to apply FinOps to solve them. 
 
 # Mission Statement
-
-tbc
 
 1. **Clarify and inform.** Provide valuable and objective information to the TAC, End Users and Projects of the FinOps Foundation regarding areas considered in-scope. Strengthen the project ecosystem to meet the needs of end users and project contributors. Educate and inform users with unbiased, effective, and practically useful information.
 2. **Collaborate and interrelate.** Effectively interface with other related groups internal and external to the FinOps Foundation and connect the dots to facilitate meaningful collaborative progression of relevant topics. Engage more communities and create an on-ramp to effective TAC contribution &amp; recognition.
@@ -19,19 +17,22 @@ tbc
 
 ## In Scope
 
-TBC
+Containers within CSP managed container environments running on a CSP platform
+Containers within self-managed container environments running on a CSP platform
+
 
 ### Current FinOps Foundation Containers Working Groups
 
-TBC
+tbc
 
 ## Out of Scope
 
-Generally anything not considered in scope.
+Generally anything not considered in scope including containers running within private owned datacenters.
+
 
 # Overlap and Relations with other Groups and Projects
 
-TBC
+SIG-Containers should interact with SIG-Engineering in order the best take advantage of the engineering knowledge of container environments.
 
 # Responsibilities and Deliverables
 
