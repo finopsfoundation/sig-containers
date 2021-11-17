@@ -58,7 +58,8 @@ Clarify any further concepts of containers within the FinOps scope.
 * How should we think about Namespaces versus labels, which of these works best when?
 * Rightsizing 
 * Automation best practice 
-* Autoscaling 
+* Autoscaling
+* ... 
 
 
 White Paper Example Topics:
@@ -107,7 +108,7 @@ This SIG follows the [standard operating model](https://github.com/finopsfoundat
 
 ## Chairs:
 
-- TAC Liaison: Eugene Khvostov
+- TAC Liaison: Jeremy Ung
 - Tech Leads: Bala Kaliamurthy
 - Chairs: David Sterz
 
@@ -119,5 +120,5 @@ In accordance with the [elections and terms](https://github.com/finopsfoundation
 - Repo: [https://github.com/finopsfoundation/sig-containers](https://github.com/finopsfoundation/sig-containers)
 - Meetings: 
   - Time: Every Thursday 8:30 AM PST / 11:30 AM ET / 5:30 PM CET - 30 Minutes 
-  - Location: Zoom - tbc
-  - Meeting Minutes: tbc
+  - Location: Zoom - lookup [Event](https://www.finops.org/resources/events/) - FinOps - Container Cost Allocation Working Group Session
+  - Meeting Minutes: shared via mail and/or Slack ([#wg-cca](https://finopsfoundation.slack.com/archives/C02BDFZR3V4))
