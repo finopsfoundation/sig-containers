@@ -75,7 +75,7 @@ Now that we’ve covered some basics, the next part of this section will start t
 
 ![A look at how complicated container cost allocation can be](https://github.com/finopsfoundation/sig-containers/blob/main/finops-for-kubernetes/img/labeling.png)
 
-*Figure 3: A look at how complicated cost allocation for containers can be.*
+*Figure 4: A look at how complicated cost allocation for containers can be.*
 *Source: Debo Aderibigbe, Billing Product Manager, Google Compute Cloud, FinOps Summit: Cost Visibility and Optimization in Kubernetes, KubeCon, CloudNativeCon EU 2020.*
 
 In any FinOps or cloud financial management strategy, flexibly understanding costs can drive more accountability. The goal: to help users see their container cost drivers by both services used and container workload. Combining these two layers helps teams determine their Total Cost of Ownership.
