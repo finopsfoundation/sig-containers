@@ -1,0 +1,12 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: acme-fitness
+  labels:
+    finops.org/application: acme-fitness
+    finops.org/cost-center: acme-1001
+    finops.org/team: road-runner
+    finops.org/product: acme-fitness-store
+    finops.org/department: retail
+    finops.org/environment: production
+    finops.org/customer: acme

@@ -1,0 +1,8 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: acme-fitness
+  labels:
+    finops.org/application: acme-fitness
+    finops.org/cost-center: acme-1001
+    finops.org/team: road-runner

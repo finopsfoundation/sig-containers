@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acmefit-frontend
+  namespace: acme-fitness
+  labels:
+    finops.org/application: acme-fitness
+    finops.org/cost-center: acme-1001
+    finops.org/team: road-runner
+    finops.org/product: acme-fitness-store
+    finops.org/department: retail
+    finops.org/environment: production
+    finops.org/customer: acme
+    finops.org/service: frontend
+    finops.org/component: frontend
+    finops.org/tech-stack: application
