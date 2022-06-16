@@ -9,7 +9,7 @@ Reviewed and Contributed to by: All Members
 The SIG Containers will take on all questions around containerized workloads of any environment in the context of FinOps from cost visibility, cost optimization and operations. All Personas are welcome to contribute by sharing their container stories, asking questions about their day to day challenges with containers so we all learn from each other.
 
 # Terms and definitions
-The SIG Containers maintains their ([glossary](glossary/README.md)) with the definitions within the context of container technologies.
+The SIG Containers maintains their [glossary](glossary/README.md) with the definitions within the context of container technologies.
 
 # Mission Statement
 
