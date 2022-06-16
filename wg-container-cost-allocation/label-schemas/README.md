@@ -7,15 +7,16 @@ Just as [there are recommended labels for Kubernetes objects](https://kubernetes
 | Key                      | Description                 | Example                   | Type   | Maturity  |
 | :----------------------- | :-------------------------- | :------------------------ | :----: | :-------: |
 | `finops.org/application` | Application Name            | `acme fitness`            | string | 1 - Crawl |
-| `finops.org/product`     | Product Name                | `acme fitness store`      | string | 2 - Walk  |
-| `finops.org/service`     | Service                     | `store shopping cart`     | string | 3 - Run   |
-| `finops.org/component`   | Component                   | `database`                | string | 3 - Run   |
-| `finops.org/department`  | Department                  | `retail`                  | string | 2 - Walk  |
 | `finops.org/cost-center` | Cost Center                 | `acme-1001`               | string | 1 - Crawl |
 | `finops.org/team`        | Team                        | `road-runner`             | string | 1 - Crawl |
+| `finops.org/product`     | Product Name                | `acme fitness store`      | string | 2 - Walk  |
+| `finops.org/department`  | Department                  | `retail`                  | string | 2 - Walk  |
 | `finops.org/environment` | Environment                 | `production`              | string | 2 - Walk  |
-| `finops.org/tech-stack`  | Technology Stack by Purpose | `application`             | string | 3 - Run   |
 | `finops.org/customer`    | Customer Name               | `acme`                    | string | 2 - Walk  |
+| `finops.org/service`     | Service                     | `store shopping cart`     | string | 3 - Run   |
+| `finops.org/component`   | Component                   | `database`                | string | 3 - Run   |
+| `finops.org/tech-stack`  | Technology Stack by Purpose | `application`             | string | 3 - Run   |
+
 
 ## Examples
 
