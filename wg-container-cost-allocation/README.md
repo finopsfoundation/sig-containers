@@ -78,9 +78,9 @@ Are there any specific slack conversations, channels, or other publications that
 * [Framework Capabilities Cost Allocation](https://www.finops.org/framework/capabilities/cost-allocation/)
 
 ## Working Group Output
-* A ready to use label schema made from the finops foundation practioners and vendors covering all [personas](https://www.finops.org/framework/personas/) and  [maturity](https://www.finops.org/framework/maturity-model/) level
-* A label dictionary with many entries for "inspiration" (and how to decide on them)
-* A glossary for the sig-containers terminology and their definition
+* A ready to use [label schema](label-schemas/README.md) made from the finops foundation practioners and vendors covering all [personas](https://www.finops.org/framework/personas/) and  [maturity](https://www.finops.org/framework/maturity-model/) level
+* A [label dictionary](label-dictionary/README.md)) with many entries for "inspiration" (and how to decide on them)
+* A [glossary](../glossary/README.md) for the sig-containers terminology and their definition
 
 ## Measures of Success
 * A label dictionary is accessible to the world and serves as inspiration and orientation to choose the right labels for allocating costs for every maturity level
