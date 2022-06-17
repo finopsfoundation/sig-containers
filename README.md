@@ -1,6 +1,8 @@
 # FinOps Foundation SIG Containers
 
+
 Primary Authors: Bala Kaliamurthy, David Sterz 
+
 
 Reviewed and Contributed to by: All Members
 
@@ -30,6 +32,7 @@ Clarify any further concepts of containers within the FinOps scope.
   * Allocation
   * Optimization
   * Governance and management in the context of cost management for containers
+
 
 # Problem Space:
 * General cloud problems map to containers (Cloud within a cloud)
@@ -74,10 +77,12 @@ White Paper Example Topics:
 - All container related technologies with a strong focus on kubernetes but not limited to it.
 - Container workload related cloud resources such as database, storage, network
 
+
 ### FinOps Foundation Containers Working Groups
 
 - (active) [Container Cost Allocation](wg-container-cost-allocation/README.md)
 - (planned) Container Cost Optimization
+
 
 ## Out of Scope
 
