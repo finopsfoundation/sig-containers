@@ -1,12 +1,17 @@
 # FinOps Foundation SIG Containers
 
-Primary Authors: Bala Kaliamurthy
+
+Primary Authors: Bala Kaliamurthy, David Sterz 
+
 
 Reviewed and Contributed to by: All Members
 
 # Introduction
 
 The SIG Containers will take on all questions around containerized workloads of any environment in the context of FinOps from cost visibility, cost optimization and operations. All Personas are welcome to contribute by sharing their container stories, asking questions about their day to day challenges with containers so we all learn from each other.
+
+# Terms and definitions
+The SIG Containers maintains their [glossary](glossary/README.md) with the definitions within the context of container technologies.
 
 # Mission Statement
 
@@ -26,7 +31,8 @@ Clarify any further concepts of containers within the FinOps scope.
   * Instrumentation
   * Allocation
   * Optimization
-  * Governance and management in the context of all financial data.  
+  * Governance and management in the context of cost management for containers
+
 
 # Problem Space:
 * General cloud problems map to containers (Cloud within a cloud)
@@ -59,25 +65,28 @@ Clarify any further concepts of containers within the FinOps scope.
 * Rightsizing 
 * Automation best practice 
 * Autoscaling
-* ... 
-
+* ...
 
 White Paper Example Topics:
-* Finops for Container 
-* https://www.finops.org/projects/calculating-container-costs/
 
+* [Finops for Containers](https://github.com/finopsfoundation/sig-containers/tree/main/finops-for-kubernetes) 
+* [Calculating Container costs](https://www.finops.org/projects/calculating-container-costs/)
 
 ## In Scope
 
-All container related technologies.
+- All container related technologies with a strong focus on kubernetes but not limited to it.
+- Container workload related cloud resources such as database, storage, network
 
-### Current FinOps Foundation Containers Working Groups
 
-- Slack Channel Container Cost Allocation ([#wg-cca](https://finopsfoundation.slack.com/archives/C02BDFZR3V4))
+### FinOps Foundation Containers Working Groups
+
+- (active) [Container Cost Allocation](wg-container-cost-allocation/README.md)
+- (planned) Container Cost Optimization
+
 
 ## Out of Scope
 
-Generally anything not considered in scope.
+- Cloud providers Software-as-a-Service (SAAS) resources
 
 # Overlap and Relations with other Groups and Projects
 
@@ -94,11 +103,17 @@ Clarify and further concepts of containers within the FinOps scope.
 
 ## Responsibilities
 
-- tbc
+- Educating vendor neutral on best practices for all container runtimes and their cost related topics.
+- Provide practical guidance and examples that can be applied in short time for any maturity level.
 
 ## Deliverables
 
-- tbc
+- [FinOps label schema presentation at FinOps March'22 Summit](https://youtu.be/q0iuFU7qh8M?t=3868)
+- [Sig-containers glossary](glossary/README.md)
+- [Label dictionary](wg-container-cost-allocation/label-dictionary/README.md)
+- [Label schemas](wg-container-cost-allocation/label-schemas/README.md)
+- (coming in Q3 2022) - container use cases and stories
+- ...
 
 # Governance and Operations
 
@@ -119,6 +134,26 @@ In accordance with the [elections and terms](https://github.com/finopsfoundation
 - Slack Channel ([#sig-containers](https://finopsfoundation.slack.com/archives/C01D5HBNQVA))
 - Repo: [https://github.com/finopsfoundation/sig-containers](https://github.com/finopsfoundation/sig-containers)
 - Meetings: 
-  - Time: Every Thursday 8:30 AM PST / 11:30 AM ET / 5:30 PM CET - 30 Minutes 
-  - Location: Zoom - lookup [Event](https://www.finops.org/resources/events/) - FinOps - Container Cost Allocation Working Group Session
-  - Meeting Minutes: shared via mail and/or Slack ([#wg-cca](https://finopsfoundation.slack.com/archives/C02BDFZR3V4))
+	- (active) WG Container Cost Allocation
+  		- Timing: Weekly at Thursday 8:30 AM PST / 11:30 AM ET / 5:30 PM CEST - 30 Minutes 
+		- Location: Zoom - lookup [Event](https://www.finops.org/resources/events/) - FinOps - Container Cost Allocation Working Group Session
+	  - Meeting Minutes: shared via mail and/or Slack ([#wg-#wg-container-cost-allocation](https://finopsfoundation.slack.com/archives/C02BDFZR3V4))
+  - (idea) sig-containers general
+
+## Main Contributors *(In alphabetical order)*
+
+- Bala kaliamurthy
+- Dan Casson
+- David Sterz
+- Erik Peterson
+- Hannah Raikes
+- Jonathan Morin
+- Kevin Mueller
+- Laila Majidi
+- Noah Abrahamas
+- Pavan Chavva
+- Roi Rav-Hon
+- Sean Pomeroy
+- Stephen Arthur
+- Stuart Davidson
+- Youssef Ibrahim
